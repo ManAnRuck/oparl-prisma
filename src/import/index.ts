@@ -29,10 +29,11 @@ export const startImport = async () => {
           meeting: undefined,
           location: undefined,
           keyword: undefined,
+          post: undefined,
           subOrganizationOf: undefined,
-          post: {
-            set: organization.post,
-          },
+          //   post: {
+          //     set: organization.post,
+          //   },
         };
         return prisma.organization
           .upsert({
