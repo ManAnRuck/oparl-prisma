@@ -1,0 +1,34 @@
+datasource db {
+    provider = "postgresql"
+    url = "***"
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model Organization {
+    id                String          @id
+    type              String
+    // Body Body
+    name              String?
+    // membership Membership[]
+    // meeting Meeting[]
+    // consultation any
+    shortName         String?
+    post              String[]
+    subOrganizationOf Organization?
+    organizationType  String?
+    classification    String?
+    startDate         String?
+    endDate           String?
+    website           String?
+    // # location any
+    // externalBody Body
+    license           String?
+    keyword           String[]
+    created           String?
+    modified          String?
+    web               String?
+    deleted           Boolean?
+}
