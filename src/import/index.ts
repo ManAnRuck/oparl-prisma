@@ -1,6 +1,10 @@
 import { Oparl } from 'oparl-sdk';
 import { Organization } from 'oparl-sdk/dist/types';
-import { PrismaClient } from '@prisma/client';
+import {
+  PrismaClient,
+  OrganizationCreateInput,
+  OrganizationUpdateInput,
+} from '@prisma/client';
 
 const oparl = new Oparl({
   entrypoint:
