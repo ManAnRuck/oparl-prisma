@@ -8,7 +8,7 @@ generator client {
 }
 
 model Organization {
-    id                String          @id
+    id                String        @id
     type              String
     // Body Body
     name              String?
