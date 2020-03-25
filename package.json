@@ -13,6 +13,7 @@
     "migrate:save": "prisma2 migrate save --experimental --name",
     "migrate:up": "prisma2 migrate up --experimental",
     "postinstall": "npm -s run generate",
+    "lint": "tsc --noEmit",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly src/server",
     "prisma:version": "prisma2 --version"
   },
