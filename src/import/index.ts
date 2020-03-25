@@ -4,6 +4,7 @@ import {
   PrismaClient,
   OrganizationCreateInput,
   OrganizationUpdateInput,
+  OrganizationCreateOneWithoutOrganizationsInput,
 } from '@prisma/client';
 
 const oparl = new Oparl({
@@ -15,6 +16,34 @@ const oparl = new Oparl({
   },
 });
 
+const prepareSubOrganizationOf = (
+  subOrganizationOf?: Organization,
+): OrganizationCreateOneWithoutOrganizationsInput | null | undefined => {
+  if (!subOrganizationOf) {
+    return {
+      connect: undefined,
+      create: undefined,
+    };
+  }
+  return {
+    connect: subOrganizationOf,
+    create: subOrganizationOf
+      ? {
+          ...subOrganizationOf,
+          post: {
+            set: subOrganizationOf.post ? subOrganizationOf.post : [],
+          },
+          keyword: {
+            set: subOrganizationOf.keyword ? subOrganizationOf.keyword : [],
+          },
+          subOrganizationOf: prepareSubOrganizationOf(
+            subOrganizationOf.subOrganizationOf,
+          ),
+        }
+      : undefined,
+  };
+};
+
 export const startImport = async () => {
   const prisma = new PrismaClient();
   let organizationList = await oparl.getOrganizations();
@@ -22,32 +51,52 @@ export const startImport = async () => {
     let hasNext = true;
     do {
       const organizations = organizationList.data.map(organization => {
-        console.log('import orga');
-        console.log(organization.post);
+        const {
+          id,
+          type,
+          classification,
+          created,
+          deleted,
+          endDate,
+          keyword,
+          license,
+          modified,
+          name,
+          organizationType,
+          post,
+          shortName,
+          startDate,
+          subOrganizationOf,
+          web,
+          website,
+        } = organization;
+        // console.log('import orga');
         const organizationPrepared:
           | OrganizationCreateInput
           | OrganizationCreateInput = {
-          ...organization,
-          body: undefined,
-          'STERNBERG:gruppierung': undefined,
-          'STERNBERG:sortierung': undefined,
-          membership: undefined,
-          meeting: undefined,
-          location: undefined,
-          keyword: undefined,
-          subOrganizationOf: undefined,
-          // post: organization.post,
-          post: {
-            set: organization.post,
-          },
+          id,
+          type,
+          classification,
+          created,
+          deleted,
+          endDate,
+          keyword: { set: keyword ? keyword : [] },
+          license,
+          modified,
+          name,
+          organizationType,
+          post: { set: post ? post : [] },
+          shortName,
+          startDate,
+          subOrganizationOf: prepareSubOrganizationOf(subOrganizationOf),
+          web,
+          website,
         };
-        return prisma.organization
-          .upsert({
-            create: organizationPrepared,
-            update: organizationPrepared,
-            where: { id: organizationPrepared.id },
-          })
-          .catch(console.log);
+        return prisma.organization.upsert({
+          create: organizationPrepared,
+          update: organizationPrepared,
+          where: { id: organizationPrepared.id },
+        });
       });
       if (organizationList?.next) {
         organizationList = await organizationList.next();
