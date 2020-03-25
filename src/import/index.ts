@@ -3,7 +3,6 @@ import { Organization } from 'oparl-sdk/dist/types';
 import {
   PrismaClient,
   OrganizationCreateInput,
-  OrganizationUpdateInput,
   OrganizationCreateOneWithoutOrganizationsInput,
 } from '@prisma/client';
 
@@ -25,6 +24,7 @@ const prepareSubOrganizationOf = (
       create: undefined,
     };
   }
+
   return {
     connect: subOrganizationOf,
     create: subOrganizationOf
@@ -70,7 +70,7 @@ export const startImport = async () => {
           web,
           website,
         } = organization;
-        // console.log('import orga');
+
         const organizationPrepared:
           | OrganizationCreateInput
           | OrganizationCreateInput = {

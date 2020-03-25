@@ -1,9 +1,11 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "rootDir": "src",
-      "lib": ["esnext", "dom"],
-      "strict": true
-    },
-    "include": ["src/**/*"]
-  }
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "lib": ["esnext", "dom"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["src/**/*"]
+}
