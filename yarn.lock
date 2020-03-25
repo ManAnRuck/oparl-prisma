@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@prisma/client@^2.0.0-preview023":
-  version "2.0.0-preview024"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.0.0-preview024.tgz#020f7c2d12e8c56fa7f096a83bc736f10a1d44a5"
-  integrity sha512-HnJxSvEY8cQgGf0xZuMh9fv85QxlKzIbieUZPfG+30WtDKD5CxmPkatZnAj+Z5CciK7WxeQNutTGZk2eEop+ZQ==
+"@prisma/client@alpha":
+  version "2.0.0-alpha.957"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.0.0-alpha.957.tgz#7f3451b1491cbdff062a67c923d8bddc4682c581"
+  integrity sha512-J1hPqjg/Ki0mNgotJNaGINTfxTFtqE9TF+s2bunrhsJIicGUxbc3iRGE+OprZs2EiIZe0nbJGbAFId4XygHUvQ==
 
 "@types/aws-lambda@8.10.13":
   version "8.10.13"
@@ -101,10 +101,10 @@
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
 
-"@types/ws@7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-7.2.2.tgz#1bd2038bc80aea60f8a20b2dcf08602a72e65063"
-  integrity sha512-oqnI3DbGCVI9zJ/WHdFo3CUE8jQ8CVQDUIKaDtlTcNeT4zs6UCg9Gvk5QrFx2QPkRszpM6yc8o0p4aGjCsTi+w==
+"@types/ws@7.2.3":
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-7.2.3.tgz#a3add56077ac6cc9396b9502c7252a1635922032"
+  integrity sha512-VT/GK7nvDA7lfHy40G3LKM+ICqmdIsBLBHGXcWD97MtqQEjNMX+7Gudo8YGpaSlYdTX7IFThhCE8Jx09HegymQ==
   dependencies:
     "@types/node" "*"
 
@@ -968,19 +968,19 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
-nexus-prisma@0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/nexus-prisma/-/nexus-prisma-0.11.0.tgz#39b6f6a70d66629f2c64e66c674e7f368bf351fc"
-  integrity sha512-p2I+uAKVwbJYAXDzeSRqKRy5IghqP1oUxJbwWYSPyhi17E6HpGeMr0MCRGx4mbM2gkTO0YjIjAKJSatFWDYicQ==
+nexus-prisma@0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/nexus-prisma/-/nexus-prisma-0.11.1.tgz#56a1261a3f78635bca234022b37081a8a8f53d74"
+  integrity sha512-ulumiVouJivOkrvixXuZai0iZSfWf3Dw7hEVqQ94yL53HvLXdnnnO0e77by/aFq6s+bHAThn1n1JS5H0YC8Kmg==
   dependencies:
     camelcase "^5.3.1"
     fs-extra "^8.1.0"
     pluralize "^8.0.0"
 
-nexus@0.12.0-rc.13:
-  version "0.12.0-rc.13"
-  resolved "https://registry.yarnpkg.com/nexus/-/nexus-0.12.0-rc.13.tgz#f6696b4d903e7c2a12b56875b122c8003be1ba31"
-  integrity sha512-RugEHXQyQXYg1i0PX0y9T/ZXliJidOnlmJxl4OeDqxedWM5QEl2qSA6Y0cOyd7p+xFh4y37zlDVh/nXw8LMnHg==
+nexus@0.12.0-rc.14:
+  version "0.12.0-rc.14"
+  resolved "https://registry.yarnpkg.com/nexus/-/nexus-0.12.0-rc.14.tgz#f5b24ac6d1e26798b3432f512f526fe084461d55"
+  integrity sha512-cXJh+ZS0xq2ra+EidpUrKxRd1oc1Wipv3n8HlIUJF8nbN3ojzmyDylJ4VxjizhGjH+Wu0AGsCUuNukUNGkPr3Q==
   dependencies:
     iterall "^1.2.2"
     tslib "^1.9.3"
@@ -1105,10 +1105,10 @@ pluralize@^8.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-8.0.0.tgz#1a6fa16a38d12a1901e0320fa017051c539ce3b1"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
 
-prisma2@^2.0.0-preview023:
-  version "2.0.0-preview024"
-  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview024.tgz#6d2004c5a0d2f58e09c5d9eabe1c5eb8d9b2d7e2"
-  integrity sha512-hQJjD0/Wv7evgH2XzHN1pSJPiVgZd8QI0cDyP+1mECUs4NBCUCrxPao7eNF5g8HGsjs30YR2/ree6i6TuwmfiQ==
+prisma2@alpha:
+  version "2.0.0-alpha.957"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-alpha.957.tgz#b5709c4b8345171ca2fcf5a414183954d7143790"
+  integrity sha512-yA9lKzigqEjx0JbV6s1IOAavV9BYjZTA/De/QnuhUBroz+QIcgAZNOWiW8rNo3CUw1iSFzcJaRYTswLeIAaX0Q==
 
 proxy-addr@~2.0.5:
   version "2.0.6"
@@ -1419,10 +1419,21 @@ ts-node-dev@1.0.0-pre.44:
     ts-node "*"
     tsconfig "^7.0.0"
 
-ts-node@*, ts-node@^8.6.2:
+ts-node@*:
   version "8.6.2"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.6.2.tgz#7419a01391a818fbafa6f826a33c1a13e9464e35"
   integrity sha512-4mZEbofxGqLL2RImpe3zMJukvEvcO1XP8bj8ozBPySdCUXEcU5cIRwR0aM3R+VoZq7iXc8N86NC0FspGRqP4gg==
+  dependencies:
+    arg "^4.1.0"
+    diff "^4.0.1"
+    make-error "^1.1.1"
+    source-map-support "^0.5.6"
+    yn "3.1.1"
+
+ts-node@^8.8.1:
+  version "8.8.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.8.1.tgz#7c4d3e9ed33aa703b64b28d7f9d194768be5064d"
+  integrity sha512-10DE9ONho06QORKAaCBpPiFCdW+tZJuY/84tyypGtl6r+/C7Asq0dhqbRZURuUlLQtZxxDvT8eoj8cGW0ha6Bg==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
